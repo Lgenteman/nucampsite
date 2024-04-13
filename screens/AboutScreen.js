@@ -34,7 +34,7 @@ const AboutScreen = () => {
                                 </ListItem.Content>
                       </ListItem>
                     );
-                })};
+                })}
             </Card>
         </ScrollView>
     );
