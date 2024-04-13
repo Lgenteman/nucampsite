@@ -25,18 +25,19 @@ const HomeScreen = () => {
     const [campsites, setCampsites] = useState(CAMPSITES);
     const [promotions, setPromotions] = useState(PROMOTIONS);
     const [partners, setPartners] = useState(PARTNERS);
-    
+
     const featCampsite = campsites.find((item) => item.featured);
     const featPromotion = promotions.find((item) => item.featured);
     const featPartner = partners.find((item) => item.featured);
 
-return(
-    <ScrollView>
-        <FeaturedItem item={featCampsite} />
-        <FeaturedItem item={featPromotion} />
-        <FeaturedItem item={featPartner} />
-    </ScrollView>>
-);
+    return (
+        <ScrollView>
+            <FeaturedItem item={featCampsite} />
+            <FeaturedItem item={featPromotion} />
+            <FeaturedItem item={featPartner} />
+        </ScrollView>
+    );
+
 };
 
 export default HomeScreen;
