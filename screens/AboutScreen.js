@@ -3,6 +3,10 @@ import {Avatar, ListItem, Card} from 'react-native-elements';
 import { ScrollView, Text } from "react-native";
 import { PARTNERS } from "../shared/partners";
 
+
+const AboutScreen = () => {
+    const [partners, setPartners] = useState(PARTNERS);
+
 const Mission = () => {
     return (
             <Card>
@@ -14,9 +18,6 @@ const Mission = () => {
             </Card>
     );
 };
-
-const AboutScreen = () => {
-    const [partners, setPartners] = useState(PARTNERS);
 
     return (
         <ScrollView>
