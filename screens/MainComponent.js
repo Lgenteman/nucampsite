@@ -83,8 +83,8 @@ return(
      > 
         <Drawer.Navigator
             initialRouteName='HomeDrawer'
-            drawerStyle={{backgroundColor: '#CEC8FF'}}
-            screenOptions={{headerShown: false}}
+            screenOptions={{drawerStyle:{backgroundColor: '#CEC8FF'}}}
+            //screenOptions={{headerShown: false}}
             >
             <Drawer.Screen
                 name='HomeDrawer'
