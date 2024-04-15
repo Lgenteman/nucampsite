@@ -99,7 +99,7 @@ return(
             <Drawer.Screen
                 name='About'
                 component={AboutNavigator}
-                options={{title: 'About'}}
+                options={{title: 'About Us'}}
             />
             <Drawer.Screen
                 name='Contact'
