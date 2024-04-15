@@ -82,10 +82,12 @@ return(
      paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight}}
      > 
         <Drawer.Navigator
-            initialRouteName='Home'
-            drawerStyle={{backgroundColor: '#CEC8FF'}}>
+            initialRouteName='HomeDrawer'
+            drawerStyle={{backgroundColor: '#CEC8FF'}}
+            screenOptions={{headerShown: false}}
+            >
             <Drawer.Screen
-                name='Home'
+                name='HomeDrawer'
                 component={HomeNavigator}
                 options={{title: 'Home'}}
             />
