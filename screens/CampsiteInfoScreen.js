@@ -1,17 +1,19 @@
 import { useState } from 'react';
-import {Flatlist, StyleSheet, Text, View} from 'react-native';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
 import RenderCampsite from '../features/campsites/RenderCampsite';
 import {COMMENTS} from '../shared/comments';
 
-const [comments, setComments] = useState(COMMENTS);
+
 
 const CampsiteInfoScreen = ({route}) => {
     const { campsite } = route.params;
+    const [comments, setComments] = useState(COMMENTS);
+    
     const renderCommentItem = ({item}) => {
         return (
-            <View style={Style.commentItem}>
+            <View style={styles.commentItem}>
                 <Text style={{fontSize: 14}}>{item.text}</Text>
-                <Text style={{fontSize: 12}}>{'-- ${item.author}, ${item.date}'}
+                <Text style={{fontSize: 12}}>{`-- ${item.author}, ${item.date}`}
                 </Text>
             </View>
         )
