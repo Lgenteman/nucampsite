@@ -16,8 +16,8 @@ const CampsiteInfoScreen = ({route}) => {
                 <Text style={{fontSize: 12}}>{`-- ${item.author}, ${item.date}`}
                 </Text>
             </View>
-        )
-    }
+        );
+    };
     return (
         <FlatList
             data={comments.filter(
@@ -32,7 +32,7 @@ const CampsiteInfoScreen = ({route}) => {
                 </>
             }       
         />
-    )
+    );
 };
 const styles = StyleSheet.create({
     commentsTitle: {

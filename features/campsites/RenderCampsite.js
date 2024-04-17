@@ -1,11 +1,12 @@
 import {Text, View} from 'react-native';
-import { Card } from 'react-native-elements';
+import { Card, Icon } from 'react-native-elements';
+import { StyleSheet } from 'react-native';
 
 const RenderCampsite = ({campsite}) => {
 
     if (campsite) {
         return(
-            <Card containerStyle={{padding: 0}}>
+            <Card style={StyleSheet.cardContainer}>
                 <Card.Image source={campsite.image}>
                     <View style={{justifyContent: 'center', flex: 1}}>
                         <Text style={{
@@ -16,6 +17,13 @@ const RenderCampsite = ({campsite}) => {
                         >
                             {campsite.name}
                         </Text>
+                        <Icon
+                        name='heart-o'
+                        type='font-awesome'
+                        color='#f50'
+                        raised
+                        reverse
+                        />
                     </View>
                 </Card.Image>
                 <Text style={{margin: 20}}>{campsite.description}</Text>
@@ -25,6 +33,12 @@ const RenderCampsite = ({campsite}) => {
     return <View />;
  
 };
-
+const styles = StyleSheet.create({
+    cardContainer: {
+        padding: 0,
+        margin: 0,
+        marginBottom: 20
+    }
+});
 
 export default RenderCampsite;
