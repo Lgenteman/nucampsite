@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleFavorite } from '../features/favorites/favoritesSlice';
 import { useState } from 'react';
 import {postComment} from '../features/comments/commentsSlice';
-import {commentsReducer} from '../features/comments/commentsSlice';
+
 
 
 
